@@ -1,0 +1,156 @@
+/* Reset geral de margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo principal da página */
+body {
+    color: white;
+    background: black;
+    font-family: "Chakra Petch", sans-serif;
+    margin-bottom: 100px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Cabeçalho */
+header {
+    border-bottom: 2px solid #62aaff;  /* Azul claro */
+    padding: 20px;
+    font-size: 32px;
+    color: #62aaff;  /* Azul claro */
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito de hover no cabeçalho */
+header:hover {
+    background-color: #1a1a1a;
+}
+
+/* Estilo da seção chamada */
+.chamada {
+    background: #5d3f8b;  /* Roxo claro */
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.chamada:hover {
+    transform: scale(1.02);  /* Efeito de zoom suave */
+}
+
+/* Texto da chamada */
+.chamada-texto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+p {
+    font-size: 20px;
+    color: #e0e0e0;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Seção de categorias de vídeos */
+.categoria {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.categoria h2 {
+    color: #62aaff;  /* Azul claro */
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Layout de vídeos da categoria */
+.categoria-videos {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+/* Estilo das miniaturas dos vídeos */
+.categoria-videos img {
+    height: 200px;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito de hover nas miniaturas */
+.categoria-videos img:hover {
+    opacity: 1;
+    border: 3px solid #62aaff;  /* Azul claro */
+    transform: translateY(-5px);  /* Levantar a imagem */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilo do iframe (vídeo embutido) */
+iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom no iframe */
+iframe:hover {
+    transform: scale(1.05);
+}
+
+/* Efeito de scroll suave na lista de vídeos */
+.categoria-videos::-webkit-scrollbar {
+    height: 10px;
+}
+
+.categoria-videos::-webkit-scrollbar-thumb {
+    background-color: #62aaff;
+    border-radius: 10px;
+}
+
+.categoria-videos::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
+/* Adicionando um efeito de transição ao carregar a página */
+@keyframes pageLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: pageLoad 1s ease-out;
+}
+
